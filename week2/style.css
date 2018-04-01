@@ -1,23 +1,24 @@
 /*general*/
 img{width:100%}
-body{margin: 0px;padding: 0px;}
+body{margin: 0px;padding: 0px;background-image: url(http://wallpapercave.com/wp/92r6xWU.jpg)}
 
-/*.grid-item {list-style-type: none;
-   margin-left:1%}*/
+.grid-item {list-style-type: none;
+   margin-left:1%}
    #grid-floats .grid-item  {height: 650px;overflow: hidden;} 
 /*grid-floats*/
-#grid-floats .grid-item  {float: left;width: 25%;
+#grid-floats .grid-item  {float: left;width: 24%;
  }
-#grid-floats .grid-item:nth-child(n):nth-child(-n+3) {width:33% }
+#grid-floats .grid-item:nth-child(n):nth-child(-n+3)
+ {width:32% }
  @media screen and (min-width:401px) and (max-width: 767px)
   {
-  #grid-floats .grid-item { width: 33%}
-   #grid-floats .grid-item:nth-child(n):nth-child(-n+2) {width:50% }
+  #grid-floats .grid-item { width: 32%}
+   #grid-floats .grid-item:nth-child(n):nth-child(-n+2) {width:49% }
   }
 
  @media screen and (max-width: 400px) 
-  { #grid-floats .grid-item {width: 50%}
-   #grid-floats .grid-item:nth-child(n):nth-child(-n+1){width:100% }
+  { #grid-floats .grid-item {width: 49%}
+   #grid-floats .grid-item:nth-child(n):nth-child(-n+1){width:99% }
     }   
 
   main section:nth-child(2){clear: both}
@@ -26,19 +27,19 @@ body{margin: 0px;padding: 0px;}
 #grid-flex { display: flex;flex-wrap: wrap;
     max-width: 1200px;}   
 
-#grid-flex .grid-item  {width: 25%}
+#grid-flex .grid-item  {width: 24%}
   
 
-#grid-flex .grid-item:nth-child(n):nth-child(-n+3) {width:33% }
+#grid-flex .grid-item:nth-child(n):nth-child(-n+3) {width:32% }
 
 
  @media screen and (min-width:401px) and (max-width: 767px) {
-  #grid-flex .grid-item { width: 33%}
-  #grid-flex .grid-item:nth-child(n):nth-child(-n+2) {width:50% }
+  #grid-flex .grid-item { width: 32%}
+  #grid-flex .grid-item:nth-child(n):nth-child(-n+2) {width:49% }
  }
 
  @media screen and (max-width: 400px)  {
-   #grid-flex .grid-item {width: 50%}
-   #grid-flex .grid-item:nth-child(n):nth-child(-n+1){width:100% }
+   #grid-flex .grid-item {width: 49%}
+   #grid-flex .grid-item:nth-child(n):nth-child(-n+1){width:99% }
       
       }  
