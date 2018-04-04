@@ -1,50 +1,68 @@
 /*general*/
-img{width:100%}
-body{margin: 0px;padding: 0px;
-background-image: url(http://wallpapercave.com/wp/92r6xWU.jpg)
-;animation-name: start; animation-duration: 10s }
-
-.grid-item {list-style-type: none;
-   margin-left:1%}   
-#grid-floats .grid-item  {height: 650px;overflow: hidden;} 
+img{width:80%;margin-left:10%}
+body{margin: 0px;padding: 0px; background-image: url(http://wallpapercave.com/wp/92r6xWU.jpg);animation-name: start; animation-duration: 10s }
+P,h1,h3{text-align: center}
+h2{color: crimson}
+.grid-item {list-style-type: none; margin-left:1%;box-sizing: border-box;}   
+main {width:90%;margin-left:5%}
+ul{padding: 2%}
 @keyframes start {from {background-image: url(http://wallpapercave.com/wp/92r6xWU.jpg)}
-                         to {background-image: url(http://wallpapercave.com/wp/8jrntKh.jpg)}}
+                  to {background-image: url(http://wallpapercave.com/wp/8jrntKh.jpg)}}
+img:hover{opacity: 0.5;}
 
 /*grid-floats*/
-#grid-floats .grid-item  {float: left;width: 24%;
- }
-#grid-floats .grid-item:nth-child(n):nth-child(-n+3)
- {width:32% }
- @media screen and (min-width:401px) and (max-width: 767px)
+#grid-floats .grid-item  {float:left;position: relative;width:24%;height: 500px}
+
+#grid-floats .grid-item:nth-child(n):nth-child(-n+1){width:49% }
+
+
+@media screen and (max-width: 767px)
   {
-  #grid-floats .grid-item { width: 32%}
-   #grid-floats .grid-item:nth-child(n):nth-child(-n+2) {width:49% }
+    #grid-floats .grid-item {width: 49%}
+    #grid-floats .grid-item:nth-child(n):nth-child(-n+1){width:99% }
   }
 
- @media screen and (max-width: 400px) 
-  { #grid-floats .grid-item {width: 49%}
-   #grid-floats .grid-item:nth-child(n):nth-child(-n+1){width:99% }
-    }   
+ @media screen and (min-width: 768px) and (max-width: 991px)
+  { #grid-floats .grid-item { width: 32%}
+  #grid-floats .grid-item:nth-child(n):nth-child(-n+2) {width:49% }
+   }   
 
-  main section:nth-child(2){clear: both}
+   @media screen and (min-width: 992px) and (max-width:1199px)
+  {
+    #grid-floats .grid-item {width: 24%}
+    #grid-floats .grid-item:nth-child(n):nth-child(-n+1){width:49% }
+  }
+  
+  main section:nth-child(2) {clear: both}
 
 /*grid-flex*/
+
+#grid-flex .grid-item:nth-child(n):nth-child(-n+1){width:49% }
+
 #grid-flex { display: flex;flex-wrap: wrap;
     max-width: 1200px;}   
 
 #grid-flex .grid-item  {width: 24%}
+
+@media screen and (max-width: 767px)
+{
+  #grid-flex .grid-item {width: 49%}
+  #grid-flex .grid-item:nth-child(n):nth-child(-n+1){width:99% }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px)
+{ #grid-flex .grid-item { width: 32%}
+#grid-flex .grid-item:nth-child(n):nth-child(-n+2) {width:49% }
+ }   
+
+ @media screen and (min-width: 992px) and (max-width:1199px)
+{
+  #grid-flex .grid-item {width: 24%}
+  #grid-flex .grid-item:nth-child(n):nth-child(-n+1){width:49% }
+}
+
+ main::after{content:"Copyright 2018,Jaber";float: right;
+  color:white; font-family:arial; background: #000;height:20px}
   
 
-#grid-flex .grid-item:nth-child(n):nth-child(-n+3) {width:32% }
 
-
- @media screen and (min-width:401px) and (max-width: 767px) {
-  #grid-flex .grid-item { width: 32%}
-  #grid-flex .grid-item:nth-child(n):nth-child(-n+2) {width:49% }
- }
-
- @media screen and (max-width: 400px)  {
-   #grid-flex .grid-item {width: 49%}
-   #grid-flex .grid-item:nth-child(n):nth-child(-n+1){width:99% }
-      
-      }  
